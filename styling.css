@@ -1,0 +1,64 @@
+/* Main Page */
+body{
+  background-color: black
+}
+/* title design */
+.title-box{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.title{
+  font-family: fantasy;
+  color: #FFF;
+  font-size: 60px;
+}
+/* Main box structure */
+.Main-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  cursor: pointer;
+}
+/* soccer canvas design */
+#penalty-canvas{
+  border: 6px groove #FFF;
+  /* position: absolute; */
+  background-color: rgb(22, 157, 22);
+  /* width: 65vw;
+  height: 40vw; */
+}
+
+
+/* left side socrecard/isntructions */
+/* .left-bars{
+  display: flex;
+  flex-direction: column;
+  height:  40vw;
+  justify-content: space-between;
+  
+}
+.score-card{
+  display: flex;
+  justify-content: space-around;
+  height: 11vw;
+  width: 15vw;
+  background-color: red;
+  border: 4px dotted #FFF;
+}
+*/
+.subtitle{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 900px;
+  background-color: rgb(255, 255, 255);
+  border: 8px dotted rgb(241, 229, 8);  
+  margin-bottom: 30px;
+  font-family: fantasy;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+}

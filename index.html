@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body onload="startGame()">
+<script>
+
+function startGame() {
+    myGameArea.start();
+}
+
+const myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 500;
+        this.canvas.height = 500;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+    }
+} -->
+
+
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+        <title>PenaltyKicKer</title>
+        <link rel="stylesheet" href="./styling.css">
+      </head>
+      <body>
+        <div class="title-box">   
+            <h1 class="title">PenaltyKicKer</h1>
+        </div>
+        <div class="Main-page" id="game-container">
+          <div class="left-bars">
+            <div class="score-card"></div>
+            <div class="subtitle">How many goals can you score?</div>
+          </div>
+          <!-- <button id="easy">Easy</button>
+          <button id="medium">Medium</button>
+           <button id="hard">Hard</button> -->
+          <canvas id="penalty-canvas" width="900px" height="550px">
+          </canvas>
+          <!-- <div id="score"></div> -->
+          <script src="penaltyKicker3.js"></script>
+        </div>
+      </body>
+</html>
+</script>
+</body>
+</html>
+
