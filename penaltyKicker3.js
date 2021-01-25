@@ -15,7 +15,7 @@ window.onload = function () {
     x: canvas.width / 2 - 200,
     y: 0,
     width: 400,
-    height: 10,
+    height: 15,
     color: "WHITE",
   }
 
@@ -31,15 +31,15 @@ window.onload = function () {
   let boxArea1 = {
     x: canvas.width/2- 350,
     y: 350,
-    width: 700,
-    height: 5,
+    width: 707,
+    height: 12,
     color: "white",
   }
 
   let boxArea2 = {
     x: canvas.height/2 + 520,
     y: 0,
-    width: 5,
+    width: 12,
     height: 350,
     color: "white",
   }
@@ -47,7 +47,7 @@ window.onload = function () {
   let boxArea3 = {
     x: canvas.height - 450,
     y: 0,
-    width: 5,
+    width: 12,
     height: 350,
     color: "white",
   }
@@ -65,7 +65,7 @@ window.onload = function () {
     // Goalie:
   let goalie = {
     x: canvas.width / 2 - 20,
-    y: 10,
+    y: 12,
     radius: 50,
     velX: 1,
     velY: 0,
@@ -111,7 +111,7 @@ window.onload = function () {
     ball: {
       x: 0,
       y: 0,
-      radius: 25,
+      radius: 20,
       angle: 0,
       speed: 300,
       visible: false,
