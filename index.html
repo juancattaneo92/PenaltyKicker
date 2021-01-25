@@ -32,6 +32,10 @@ const myGameArea = {
     <head>
       <meta charset="UTF-8">
         <title>PenaltyKicKer</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styling.css">
       </head>
       <body>
@@ -40,16 +44,15 @@ const myGameArea = {
         </div>
         <div class="Main-page" id="game-container">
           <div class="left-bars">
-            <div class="score-card"></div>
             <div class="subtitle">How many goals can you score?</div>
           </div>
-          <!-- <button id="easy">Easy</button>
-          <button id="medium">Medium</button>
-           <button id="hard">Hard</button> -->
-          <canvas id="penalty-canvas" width="900px" height="550px">
-          </canvas>
-          <!-- <div id="score"></div> -->
+          
+          <canvas id="penalty-canvas" width="900px" height="550px"></canvas>
+          
           <script src="penaltyKicker3.js"></script>
+        </div>
+        <div class="score-card">
+            <div class="top-score">Top Score:</div>
         </div>
       </body>
 </html>

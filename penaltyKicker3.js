@@ -70,6 +70,7 @@ window.onload = function () {
     velX: 1,
     velY: 0,
     color: "RED",
+    
   }
 
   function goalieBounds() {

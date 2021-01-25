@@ -1,6 +1,7 @@
 /* Main Page */
 body{
-  background-color: black
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
 }
 /* title design */
 .title-box{
@@ -9,7 +10,7 @@ body{
   align-content: center;
 }
 .title{
-  font-family: fantasy;
+  font-family: 'Press Start 2P', cursive;
   color: #FFF;
   font-size: 60px;
 }
@@ -19,7 +20,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  font-family: 'Special Elite', cursive;
   cursor: pointer;
 }
 /* soccer canvas design */
@@ -27,11 +28,22 @@ body{
   border: 6px groove #FFF;
   /* position: absolute; */
   background-color: rgb(22, 157, 22);
+  font-family: 'Special Elite', cursive;
   /* width: 65vw;
   height: 40vw; */
 }
+.score-card{
+  margin: 5em 10em 10em 16em;
+  height: 400px;
+  width: 900px;
+  border: 4px dotted #FFF;
+} 
 
-
+.top-score{
+  margin: 5em;
+  font-family: 'Press Start 2P', cursive;
+  color: white
+}
 /* left side socrecard/isntructions */
 /* .left-bars{
   display: flex;
@@ -40,6 +52,7 @@ body{
   justify-content: space-between;
   
 }
+
 .score-card{
   display: flex;
   justify-content: space-around;
@@ -47,8 +60,8 @@ body{
   width: 15vw;
   background-color: red;
   border: 4px dotted #FFF;
-}
-*/
+} 
+
 .subtitle{
   display: flex;
   justify-content: center;
@@ -57,7 +70,7 @@ body{
   background-color: rgb(255, 255, 255);
   border: 8px dotted rgb(241, 229, 8);  
   margin-bottom: 30px;
-  font-family: fantasy;
+  font-family: 'Special Elite', cursive;
   font-size: 35px;
   color: black;
   font-weight: bold;
