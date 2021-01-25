@@ -65,16 +65,18 @@ window.onload = function () {
     // Goalie:
   let goalie = {
     x: canvas.width / 2 - 20,
-    y: 40,
-    radius: 30,
+    y: 10,
+    radius: 50,
     velX: 1,
     velY: 0,
     color: "RED",
+    height: 100,
+    width: 100,
     
   }
 
   function goalieBounds() {
-    if (goalie.x + goalie.velX > (goalBox.width + 220) || goalie.x + goalie.velX < goalBox.width - 120) {
+    if (goalie.x + goalie.velX > (goalBox.width + 170) || goalie.x + goalie.velX < goalBox.width - 170) {
       goalie.velX = -goalie.velX;
     }
   }
@@ -84,9 +86,11 @@ window.onload = function () {
   }
 
   function drawGoalie() {
+    let img = document.getElementById("goalie")
     ctx.beginPath();
-    ctx.arc(goalie.x, goalie.y, goalie.radius, 0, Math.PI * 2);
-    ctx.fillStyle = goalie.color;
+    ctx.drawImage(img, goalie.x, goalie.y, goalie.width, goalie.height)
+    // ctx.arc(goalie.x, goalie.y, goalie.radius, 0, Math.PI * 2);
+    // ctx.fillStyle = goalie.color;
     ctx.fill();
     ctx.closePath();
   }
@@ -143,10 +147,12 @@ window.onload = function () {
 
 
     // Draw the angle
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 6;
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
     ctx.lineTo(centerX + 0.2 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.2 * canvas.height * Math.sin(degToRad(player.angle)));
+    // ctx.lineTo(centerX + 0.3 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.3 * canvas.height * Math.sin(degToRad(player.angle)));
+
     ctx.stroke();
 
     // Draw ball
@@ -244,13 +250,15 @@ window.onload = function () {
       setGameState(gamestates.gameover)
       return;
     }
+  // } else if (player.ball.y >= goalBox.y && player.ball.x < goalBox.x && player.ball.x > goalBox.x + goalBox.width){
+  //     setGameState(gamestates.gameover)
+  //   }
   }
 
   function nextBall() {
     player.ball.x = player.x;
     player.ball.y = player.y;
     player.ball.visible = true;
-    // setGameState(gamestates.newtry);
   }
 
   function kickBall() {
@@ -269,6 +277,7 @@ function blocked(){
 
   if ((dx*dx) + (dy*dy) <= closestDistance*closestDistance){
     setGameState(gamestates.block)
+    player.ball.speed = 300,
     newGame();
 
   }
@@ -282,9 +291,6 @@ function difficulty(){
   setGameState(gamestates.diff);
 
   }
-
-
-
 
 //--------------------------------
 //After result decides if new attempts or Gameover
@@ -307,8 +313,8 @@ function gameOver(){
   function onMouseMove(e) {
     let pos = getMousePos(canvas, e);
     let mouseangle = radToDeg(Math.atan2((canvas.width) - pos.y, pos.x - (canvas.height)));
-    if (mouseangle < 0) {
-      mouseangle = 180 + (180 + mouseangle);
+    if (mouseangle < 0 ){
+      mouseangle = 180 + (90 + mouseangle);
     }
     let leftSide = 8;
     let rightSide = 172;
