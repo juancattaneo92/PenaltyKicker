@@ -140,8 +140,7 @@ window.onload = function () {
     ctx.beginPath();
     ctx.arc(centerX, centerY, player.ball.radius + 10, 0, 2 * Math.PI, false);
     ctx.fill();
-    // ctx.strokeStyle = "black";
-    // ctx.stroke();
+
 
     // Draw the angle
     ctx.lineWidth = 2;
@@ -195,10 +194,6 @@ window.onload = function () {
   // Main clear canvas, update and render
   function main(tframe) {
     window.requestAnimationFrame(main);
-      // ctx.clearRect(0, 0, canvas.width, canvas.height);
-    // if (!initialized){
-    // }else{
-      // }
       update(tframe);
       render();
     }
@@ -241,7 +236,6 @@ window.onload = function () {
   player.ball.y += dt * player.ball.speed * -1 * Math.sin(degToRad(player.ball.angle));
 
   if (player.ball.y <= goalBox.y && player.ball.x > goalBox.x && player.ball.x < goalBox.x + goalBox.width){
-    // if (player.ball.y <= goalBox.y){
       player.score += 1;
       nextBall();
       difficulty();
@@ -364,22 +358,11 @@ function gameOver(){
     renderboxArea();
 
     ctx.fillStyle = "#white";
-    ctx.font = "50px fantasy";
+    ctx.font = '40px "Press Start 2P"';
     var scorex = canvas.width / 2 + 160;
     var scorey = canvas.height / 2 + 160;
     drawCenterText("Score:", scorex, scorey, 150);
-    ctx.font = "50px fantasy";
     drawCenterText(player.score, scorex, scorey + 50, 150);
-
-    // if (gamestate == gamestates.gameover) {
-    //   ctx.fillStyle = "red";
-    //   ctx.fillRect(18.5, 0.5 + canvas.height - 51, player * (canvas.width - 37), 32);
-
-    //   ctx.fillStyle = "white";
-    //   ctx.font = "24px Verdana";
-    //   drawCenterText("Game Over!", canvas.width / 2, canvas.height / 2);
-    //   drawCenterText("Click to start", canvas.width / 2, canvas.height / 2);
-    // }
 
   }
 
