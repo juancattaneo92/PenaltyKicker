@@ -26,24 +26,41 @@ body{
 /* soccer canvas design */
 #penalty-canvas{
   border: 6px groove #FFF;
-  /* position: absolute; */
   background-color: rgb(22, 157, 22);
-  font-family: 'Special Elite', cursive;
-  /* width: 65vw;
-  height: 40vw; */
 }
-.score-card{
-  margin: 5em 10em 10em 16em;
-  height: 400px;
-  width: 900px;
-  border: 4px dotted #FFF;
+
+.under-canvas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 } 
 
-.top-score{
+.container{
+  width: 900px;
+  display: flex;
   margin: 5em;
-  font-family: 'Press Start 2P', cursive;
-  color: white
 }
+
+.top-score{
+  margin: 2em;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  height: 400px;
+  width: 400px;
+  border: 4px dotted #FFF;
+  display: flex ;
+}
+
+.instructions{
+  margin: 2em;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  height: 400px;
+  width: 500px;
+  border: 4px dotted #FFF;
+  display: flex;
+
 /* left side socrecard/isntructions */
 /* .left-bars{
   display: flex;
