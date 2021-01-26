@@ -125,14 +125,19 @@ window.onload = function () {
 
   
   function drawBall() {
+
+    let img2 = document.getElementById("soccer-ball")
+    // ctx.beginPath();
+    
     ctx.save();
     ctx.beginPath();
-    ctx.moveTo(canvas.width / 2, canvas.height - 80)
-    ctx.arc(player.ball.x, player.ball.y, player.ball.radius, 0, Math.PI * 2);
+    ctx.moveTo(canvas.width / 2 - player.ball.radius, canvas.height - 80)
+    ctx.drawImage(img2, player.ball.x - player.ball.radius, player.ball.y - player.ball.radius, 40, 40)
+    // ctx.arc(player.ball.x, player.ball.y, player.ball.radius, 0, Math.PI * 2);
     ctx.fillStyle = "black";
     ctx.fill();
     ctx.strokeStyle = "black";
-
+69
   }
   
   function renderPlayer() {
