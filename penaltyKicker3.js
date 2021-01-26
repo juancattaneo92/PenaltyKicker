@@ -112,7 +112,7 @@ window.onload = function () {
       x: 0,
       y: 0,
       radius: 20,
-      angle: 0,
+      angle: 90,
       speed: 300,
       visible: false,
       color: "black",
@@ -145,14 +145,14 @@ window.onload = function () {
     let centerY = player.y;
 
     // Draw player background circle
-    ctx.fillStyle = "#FFFF00";
+    ctx.fillStyle = "White";
     ctx.beginPath();
-    ctx.arc(centerX, centerY, player.ball.radius + 10, 0, 2 * Math.PI, false);
+    ctx.arc(centerX, centerY, player.ball.radius, 0, 2 * Math.PI, false);
     ctx.fill();
 
 
     // Draw the angle
-    ctx.lineWidth = 6;
+    ctx.lineWidth = 4;
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
     ctx.lineTo(centerX + 0.2 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.2 * canvas.height * Math.sin(degToRad(player.angle)));
@@ -317,21 +317,21 @@ function gameOver(){
   // Mouse Control: Movement
   function onMouseMove(e) {
     let pos = getMousePos(canvas, e);
-    let mouseangle = radToDeg(Math.atan2((canvas.width) - pos.y, pos.x - (canvas.height)));
-    if (mouseangle < 0 ){
-      mouseangle = 180 + (90 + mouseangle);
-    }
-    let leftSide = 8;
-    let rightSide = 172;
-    if (mouseangle > 90 && mouseangle < 270) {
-      if (mouseangle > rightSide) {
-        mouseangle = rightSide;
-      }
-    } else {
-      if (mouseangle < leftSide || mouseangle >= 270) {
-        mouseangle = leftSide;
-      }
-    }
+    let mouseangle = radToDeg(Math.atan2((canvas.width) - (pos.y + 360), (pos.x + 100) - (canvas.height)));
+    // if (mouseangle < 0 ){
+    //   mouseangle = 180 + (90 + mouseangle);
+    // }
+    // let leftSide = 8;
+    // let rightSide = 172;
+    // if (mouseangle > 90 && mouseangle < 270) {
+    //   if (mouseangle > rightSide) {
+    //     mouseangle = rightSide;
+    //   }
+    // } else {
+    //   if (mouseangle < leftSide || mouseangle >= 270) {
+    //     mouseangle = leftSide;
+    //   }
+    // }
     player.angle = mouseangle;
   }
  // Mouse Control: Click
@@ -348,8 +348,11 @@ function gameOver(){
   function getMousePos(canvas, e) {
     let rect = canvas.getBoundingClientRect();
     return {
-      x: Math.round((e.clientX) / (rect.right) * canvas.width),
-      y: Math.round((e.clientY) / (rect.bottom) * canvas.height)
+      // x: Math.round((e.clientX) / (rect.right) * canvas.width),
+      // y: Math.round((e.clientY) / (rect.bottom) * canvas.height)
+      x: Math.round((e.clientX) - rect.left),
+      y: Math.round((e.clientY) - rect.top)
+      
     };
   }
 
