@@ -155,7 +155,7 @@ window.onload = function () {
     ctx.lineWidth = 4;
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX + 0.2 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.2 * canvas.height * Math.sin(degToRad(player.angle)));
+    ctx.lineTo(centerX + 0.1 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.1 * canvas.height * Math.sin(degToRad(player.angle)));
     // ctx.lineTo(centerX + 0.3 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.3 * canvas.height * Math.sin(degToRad(player.angle)));
 
     ctx.stroke();
