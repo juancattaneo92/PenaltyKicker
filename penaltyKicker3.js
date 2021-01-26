@@ -66,7 +66,7 @@ window.onload = function () {
   let goalie = {
     x: canvas.width / 2 - 20,
     y: 12,
-    radius: 50,
+    radius: 25,
     velX: 1,
     velY: 0,
     color: "RED",
@@ -133,7 +133,6 @@ window.onload = function () {
     ctx.beginPath();
     ctx.moveTo(canvas.width / 2 - player.ball.radius, canvas.height - 80)
     ctx.drawImage(img2, player.ball.x - player.ball.radius, player.ball.y - player.ball.radius, 40, 40)
-    // ctx.arc(player.ball.x, player.ball.y, player.ball.radius, 0, Math.PI * 2);
     ctx.fillStyle = "black";
     ctx.fill();
     ctx.strokeStyle = "black";
@@ -190,7 +189,7 @@ window.onload = function () {
 
   //--------------------------------
   //Set Games State:
-  let gamestates = { init: 0, ready: 1, kickBall: 2, block: 3, diff: 4, gameover: 5};
+  let gamestates = { init: 0, ready: 1, kickBall: 2, block: 3, diff: 4, out: 5, gameover: 6};
   let gamestate = gamestates.init;
 
   function setGameState(newgamestate) {
@@ -222,6 +221,8 @@ window.onload = function () {
       stateKickBall(dt);
     }else if (gamestate === gamestates.diff) {
       difficulty();
+    // }else if (gamestate === gamestates.out) {
+    //     outside();
     }else if (gamestate === gamestates.gameover) {
       gameOver();
     }
@@ -255,9 +256,6 @@ window.onload = function () {
       setGameState(gamestates.gameover)
       return;
     }
-  // } else if (player.ball.y >= goalBox.y && player.ball.x < goalBox.x && player.ball.x > goalBox.x + goalBox.width){
-  //     setGameState(gamestates.gameover)
-  //   }
   }
 
   function nextBall() {
@@ -289,6 +287,15 @@ function blocked(){
 
 }
 
+// function outside(){
+
+//   if (player.ball.y <= goalBox.y && player.ball.x < goalBox.x && player.ball.x > goalBox.x + goalBox.width) {
+//     setGameState(gamestates.out)
+//     player.ball.speed = 300,
+//     newGame();
+//   }
+// }
+
 function difficulty(){
 
   goalie.velX = goalie.velX * 1.2;
@@ -318,20 +325,6 @@ function gameOver(){
   function onMouseMove(e) {
     let pos = getMousePos(canvas, e);
     let mouseangle = radToDeg(Math.atan2((canvas.width) - (pos.y + 360), (pos.x + 100) - (canvas.height)));
-    // if (mouseangle < 0 ){
-    //   mouseangle = 180 + (90 + mouseangle);
-    // }
-    // let leftSide = 8;
-    // let rightSide = 172;
-    // if (mouseangle > 90 && mouseangle < 270) {
-    //   if (mouseangle > rightSide) {
-    //     mouseangle = rightSide;
-    //   }
-    // } else {
-    //   if (mouseangle < leftSide || mouseangle >= 270) {
-    //     mouseangle = leftSide;
-    //   }
-    // }
     player.angle = mouseangle;
   }
  // Mouse Control: Click
@@ -348,8 +341,6 @@ function gameOver(){
   function getMousePos(canvas, e) {
     let rect = canvas.getBoundingClientRect();
     return {
-      // x: Math.round((e.clientX) / (rect.right) * canvas.width),
-      // y: Math.round((e.clientY) / (rect.bottom) * canvas.height)
       x: Math.round((e.clientX) - rect.left),
       y: Math.round((e.clientY) - rect.top)
       
