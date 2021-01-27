@@ -66,7 +66,7 @@ window.onload = function () {
   let goalie = {
     x: canvas.width / 2 - 20,
     y: 12,
-    radius: 25,
+    radius: 30,
     velX: 1,
     velY: 0,
     color: "RED",
@@ -253,8 +253,13 @@ window.onload = function () {
       difficulty();
       setGameState(gamestates.ready);
     }else if (blocked()){
-      setGameState(gamestates.gameover)
-      return;
+      nextBall();
+      // setGameState(gamestates.gameover)
+      newGame();
+  } else if (player.ball.y <= 0 && (player.ball.x <= 0 || player.ball.x >= canvas.width) || (player.ball.x < -20 && player.ball.y > 0) || (player.ball.x > canvas.width + 20) ){
+      nextBall();
+      // setGameState(gamestates.gameover);
+      newGame();
     }
   }
 

@@ -39,25 +39,29 @@ const myGameArea = {
         <link rel="stylesheet" href="./styling.css">
       </head>
       <body>
-        <div class="title-box">   
-            <h1 class="title">PenaltyKicKer</h1>
-        </div>
-        <div class="Main-page" id="game-container">
+        <div class="title">PenaltyKicKer</div>
+        <div class="whole-page">
+            <!-- <div class="next-canvas">
+              <div class="instructions">
+                <h1>Instructions:</h1>
+                <br />
+                <p> Point and Click to shot, speed increases after each goal! 
+                  Try to score as much as you can, and beat your friends!!
+                </p>
+              </div>
+            </div> -->
+     
+              <div class="main-canvas" id="game-container">
+                
+                <canvas id="penalty-canvas" width="900px" height="550px">
+                  
+                  <img id="goalie" src="goalkeeper2.png" alt="">
+                  <img id="soccer-ball" width="5" height="5" src="soccer-ball.png" alt="" />
+                </canvas>
+                
+                <script src="penaltyKicker3.js"></script>
+              </div>
 
-          <canvas id="penalty-canvas" width="900px" height="550px">
-
-            <img id="goalie" src="goalkeeper2.png" alt="">
-            <img id="soccer-ball" width="5" height="5" src="soccer-ball.png" alt="" />
-          </canvas>
-          
-          <script src="penaltyKicker3.js"></script>
-        </div>
-        <div class="under-canvas">
-          <div class="container">
-            <div class="instructions">Instructions:</div>
-            <p></p>
-            <div class="top-score">Top Score:</div>
-          </div>
         </div>
       </body>
 </html>

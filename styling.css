@@ -4,16 +4,7 @@ body{
   font-family: 'Press Start 2P', cursive;
 }
 /* title design */
-.title-box{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.title{
-  font-family: 'Press Start 2P', cursive;
-  color: #FFF;
-  font-size: 60px;
-}
+
 /* Main box structure */
 .Main-page{
   display: flex;
@@ -29,19 +20,6 @@ body{
   background-color: rgb(22, 157, 22);
 }
 
-.under-canvas{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} 
-
-.container{
-  width: 900px;
-  display: flex;
-  margin: 5em;
-}
-
 .top-score{
   margin: 2em;
   font-family: 'Press Start 2P', cursive;
@@ -53,11 +31,42 @@ body{
 }
 
 .instructions{
+  position: absolute;
   margin: 2em;
   font-family: 'Press Start 2P', cursive;
   color: white;
   height: 400px;
-  width: 500px;
+  width: 200px;
   border: 4px dotted #FFF;
   display: flex;
+}
+
+
+.under-canvas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} 
+
+.whole-page{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.Main-page{
+  display: flex;
+  /* width: 90vw; */
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  font-family: 'Press Start 2P', cursive;
+  color: #FFF;
+  font-size: 60px;
 }
