@@ -3,7 +3,7 @@
 
 @media (max-width: 300px) {
 body{
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +33,7 @@ body{
 .main-canvas{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .instructions-container{
@@ -49,7 +50,7 @@ body{
 
 
 body{
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
