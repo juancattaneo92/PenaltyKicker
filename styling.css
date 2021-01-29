@@ -1,82 +1,92 @@
 /* Main Page */
+
+
+@media (max-width: 300px) {
 body{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
   background-color: black;
   font-family: 'Press Start 2P', cursive;
 }
-/* title design */
 
-/* Main box structure */
-.Main-page{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Special Elite', cursive;
-  cursor: pointer;
-}
-/* soccer canvas design */
 #penalty-canvas{
-  border: 6px groove #FFF;
-  background-color: rgb(22, 157, 22);
-  width: 900px;
-  height: 550px;
-}
-
-@media (max-width: 300px) {
-#penalty-canvas {
-width: 200px;
-height: 122px;
-}
-}
-
-
-.top-score{
-  margin: 2em;
-  font-family: 'Press Start 2P', cursive;
-  color: white;
-  height: 400px;
-  width: 400px;
-  border: 4px dotted #FFF;
-  display: flex ;
-}
-
-.instructions{
-  position: absolute;
-  margin: 2em;
-  font-family: 'Press Start 2P', cursive;
-  color: white;
-  height: 400px;
-  width: 200px;
-  border: 4px dotted #FFF;
-  display: flex;
-}
-
-
-.under-canvas{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} 
-
-.whole-page{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-}
-
-.Main-page{
-  display: flex;
-  /* width: 90vw; */
+  border: 2px groove #FFF;
+  background-color: rgb(20, 180, 20);
+  width: 280px;
+  height: 170px;
 }
 
 .title{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em;
+  margin: 2px;
   font-family: 'Press Start 2P', cursive;
   color: #FFF;
   font-size: 60px;
+}
+
+.main-canvas{
+  display: flex;
+  justify-content: center;
+}
+
+.instructions-container{
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 280px;
+  border: 2px dashed white;
+  padding: 1px 0px 0px 1px;
+}
+}
+
+
+
+body{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#penalty-canvas{
+  border: 10px groove #FFF;
+  background-color: rgb(20, 180, 20);
+  width: 900px;
+  height: 550px;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em;
+  font-family: 'Press Start 2P', cursive;
+  color: #FFF;
+  font-size: 60px;
+}
+
+.main-canvas{
+  display: flex;
+  justify-content: center;
+}
+
+.instructions-container{
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 900px;
+  border: 2px dashed white;
+  padding: 1em 0em 0em 1em;
 }
