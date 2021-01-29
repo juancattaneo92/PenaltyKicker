@@ -66,7 +66,7 @@ window.onload = function () {
   let goalie = {
     x: canvas.width / 2 - 20,
     y: 12,
-    radius: 30,
+    radius: 20,
     velX: 1,
     velY: 0,
     color: "RED",
@@ -111,7 +111,7 @@ window.onload = function () {
     ball: {
       x: 0,
       y: 0,
-      radius: 15,
+      radius: 17,
       angle: 90,
       speed: 300,
       visible: false,
@@ -132,7 +132,7 @@ window.onload = function () {
     ctx.save();
     ctx.beginPath();
     ctx.moveTo(canvas.width / 2 - player.ball.radius, canvas.height - 80)
-    ctx.drawImage(img2, player.ball.x - player.ball.radius, player.ball.y - player.ball.radius, 30, 30)
+    ctx.drawImage(img2, player.ball.x - player.ball.radius, player.ball.y - player.ball.radius, 35, 35)
     ctx.fillStyle = "black";
     ctx.fill();
     ctx.strokeStyle = "black";
