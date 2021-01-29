@@ -111,7 +111,7 @@ window.onload = function () {
     ball: {
       x: 0,
       y: 0,
-      radius: 20,
+      radius: 15,
       angle: 90,
       speed: 300,
       visible: false,
@@ -132,7 +132,7 @@ window.onload = function () {
     ctx.save();
     ctx.beginPath();
     ctx.moveTo(canvas.width / 2 - player.ball.radius, canvas.height - 80)
-    ctx.drawImage(img2, player.ball.x - player.ball.radius, player.ball.y - player.ball.radius, 40, 40)
+    ctx.drawImage(img2, player.ball.x - player.ball.radius, player.ball.y - player.ball.radius, 30, 30)
     ctx.fillStyle = "black";
     ctx.fill();
     ctx.strokeStyle = "black";
@@ -154,7 +154,7 @@ window.onload = function () {
     ctx.lineWidth = 4;
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX + 0.1 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.1 * canvas.height * Math.sin(degToRad(player.angle)));
+    ctx.lineTo(centerX + 0.2 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.2 * canvas.height * Math.sin(degToRad(player.angle)));
     // ctx.lineTo(centerX + 0.3 * canvas.width * Math.cos(degToRad(player.angle)), centerY - 0.3 * canvas.height * Math.sin(degToRad(player.angle)));
 
     ctx.stroke();
